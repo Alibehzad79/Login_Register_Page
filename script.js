@@ -8,7 +8,6 @@ function changeToRegister() {
         registerForm.classList.add('active')
     })
 }
-
 changeToRegister();
 
 
@@ -21,5 +20,13 @@ function changeToLogin() {
         registerForm.classList.remove('active')
     })
 }
-
 changeToLogin();
+
+
+function activeInput(event) {
+    if (screen.width > 600) {
+        let input = event;
+        input.style.border = '1px solid #4054D2';
+    }
+}
+activeInput()

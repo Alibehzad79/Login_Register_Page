@@ -11,7 +11,7 @@ body {
     justify-content: center;
     justify-items: center;
     align-items: center;
-    align-content: s;
+    align-content: center;
     border-radius: 1rem;
     margin: 150px 50px;
     background-color: #FBFBFC;
@@ -36,6 +36,8 @@ h2 {
     margin-bottom: 50px;
     font-size: 30px;
     font-weight: 100;
+    text-decoration: overline solid #0B1CD5;
+    padding: 10px;
 }
 
 .img {
@@ -61,8 +63,15 @@ h2 {
 }
 
 @keyframes show {
-    0% {opacity: 0; transform: scale(0);}
-    100% {opacity: 1; transform: scale(1);}
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 input {
@@ -73,14 +82,20 @@ input {
     background-color: #FBFBFC;
 }
 
-.password, .email {
+.password,
+.email {
     border: none;
-    padding: 0;
+    padding: 20px;
+    width: 60%;
+}
+
+.email {
+    width: 100%;
 }
 
 .pass-reset {
     border: 1px solid #B0B6D0;
-    padding: 15px;
+    padding: 0 5px;
     border-radius: 10px;
     display: flex;
     align-content: flex-start;
@@ -88,17 +103,21 @@ input {
     justify-items: baseline;
     align-items: baseline;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .reset-password {
     font-size: 15px;
+    padding-right: 10px;
 }
+
 .remember-box {
     border: none;
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
 }
+
 .remember-text {
     font-size: 15px;
 }
@@ -108,7 +127,7 @@ input {
 }
 
 .btn {
-    padding: 10px;
+    padding: 15px;
     outline: none;
     border: none;
     cursor: pointer;
@@ -121,6 +140,7 @@ input {
     color: #ffffff;
     border-radius: 9px;
 }
+
 .btn-login:hover {
     background-color: #0B1CD5;
 }
@@ -151,7 +171,7 @@ p {
 .or::before {
     content: "────────────────────────";
     margin-right: 10px;
-    
+
 }
 
 .or::after {
@@ -172,4 +192,75 @@ label {
 
 a:hover {
     color: #07139C;
+}
+
+
+
+@media screen and (max-width: 810px){
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    .container {
+        padding: 0;
+        margin: 0;
+        position: relative;
+        border-radius: 0;
+        width: 80%;
+        background: linear-gradient(to right, #FFECD2, #FCB69F);
+        width: 100%;
+        align-items: flex-start;
+        position: absolute;
+        height: 100%;
+    }
+    
+    .img {
+        display: none;
+        
+    }
+
+    .row {
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        border: 0;
+    }
+    .form {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    .pass-reset {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        border: none;
+    }
+    .remember-box {
+        flex-direction: row;
+    }
+    .email, .password {
+        width: 100%;
+        border: 1px solid #5E5763;
+
+        margin-bottom: 10px;
+    }
+    .or {
+        width: 100%;
+    }
+    .or::before {
+        content: '';
+        padding: 0;
+        margin: 0;
+    }
+    .or::after {
+        content: '';
+        padding: 0;
+        margin: 0;
+    }
 }
