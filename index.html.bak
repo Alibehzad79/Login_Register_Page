@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <img src="./img/loginx.jpg" alt="img" class="img">
+            <img src="./img/login.jpg" alt="img" class="img">
         </div>
         <div class="row">
             <form action="#" class="form active" id="login">
